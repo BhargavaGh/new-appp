@@ -1,3 +1,12 @@
 # new-app
 
-not main branch
+## Devops tools
+- UNIX/SHELL
+- GIT/GITHUB
+- MAVEN
+## Excecute below command
+```
+choco install
+```
+
+
