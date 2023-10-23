@@ -8,5 +8,8 @@
 ```
 choco install
 ```
-
+slno | tool name | duration
+-----|---|---
+1 | git | 1week
+2 | maven | 4days
 
