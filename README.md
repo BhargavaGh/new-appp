@@ -6,7 +6,7 @@
 - MAVEN
 ## Excecute below command
 ```
-choco install
+choco install git
 ```
 slno | tool name | duration
 -----|---|---
