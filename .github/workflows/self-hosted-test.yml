@@ -15,5 +15,5 @@ jobs:
         run: |
           echo "Running on Self-Hosted Runner!"
           Get-ComputerInfo | Select-Object -Property OSName, WindowsVersion
-        shell: pwsh
+        shell: powershell
 
