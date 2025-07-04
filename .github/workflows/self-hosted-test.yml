@@ -1,0 +1,19 @@
+name: Test Self-Hosted Runner
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  test-on-self-hosted:
+    runs-on: self-hosted
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Run PowerShell Script
+        run: |
+          echo "Running on Self-Hosted Runner!"
+          Get-ComputerInfo | Select-Object -Property OSName, WindowsVersion
+        shell: pwsh
+
