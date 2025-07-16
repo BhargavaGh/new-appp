@@ -1,0 +1,23 @@
+name: Test Self-Hosted Runner
+
+on:
+  workflow_dispatch:  # Manual trigger
+
+jobs:
+  validate-runner:
+    runs-on: self-hosted
+    name: Self-Hosted Validation Job
+
+    steps:
+      - name: Print Environment Variables
+        shell: powershell
+        run: |
+          Write-Output "Runner OS: $env:RUNNER_OS"
+          Write-Output "Repo Name: $env:GITHUB_REPOSITORY"
+
+      - name: Create and read a file
+        shell: powershell
+        run: |
+          New-Item -Path "testfile.txt" -ItemType File -Value "Self-hosted runner is working!"
+          Get-Content testfile.txt
+
