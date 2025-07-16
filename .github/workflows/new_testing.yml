@@ -1,4 +1,4 @@
-name: Test Self-Hosted Runner
+name: Test Self-Hosted Runner - new
 
 on:
   workflow_dispatch:  # Manual trigger
