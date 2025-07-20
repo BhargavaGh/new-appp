@@ -8,7 +8,7 @@ on:
 
 jobs:
   build:
-    runs-on: [self-hosted, linux2]
+    runs-on: [self-hosted, linux]
 
     strategy:
       matrix:
@@ -33,7 +33,7 @@ jobs:
 
   run_tests:
     needs: build
-    runs-on: [self-hosted, linux2]
+    runs-on: [self-hosted, linux]
 
     strategy:
       matrix:
