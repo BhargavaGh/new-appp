@@ -1,6 +1,15 @@
-name: docker builind and push
+name: docker build and push
 
 on:
   push: 
-    branches: [main]
+    branches: ["main"]
 
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:  
+      - uses: actions/checkout@v4
+      - run: cd react && docker build . -t bhargavagh/bhargavatest
+      - run: echo "${{secrets.DOCKERGUB_TOKEN}}" | docker login -u "${{secrets.DOCKERGUB_USER}} --password-stdin
+      - run: docker push bhargavagh/bhargavatest:latest
