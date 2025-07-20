@@ -27,7 +27,7 @@ jobs:
     - name: installing dependency
       run: cd react && npm i
     
-    - name: run build command
+    - name: runn build command
       run: cd react && npm run build
 
 
@@ -48,7 +48,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
         cache-dependency-path: react/package-lock.json
-        
+
     - name: installing dependency
       run: cd react && npm i
     
