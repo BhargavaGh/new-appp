@@ -1,0 +1,6 @@
+name: docker builind and push
+
+on:
+  push: 
+    branches: [main]
+
